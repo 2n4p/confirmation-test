@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +18,9 @@ use App\Http\Controllers\FormController;
 Route::get('/', [FormController::class, 'index']);
 Route::post('/confirm', [FormController::class, 'confirm']);
 Route::post('/thanks', [FormController::class, 'thanks']);
+
+Route::get('/admin', [AuthController::class, 'admin']);
+Route::get('/register', [AuthController::class, 'register']);
+Route::get('/login', [AuthController::class, 'login']);
+Route::get('/admin', [AuthController::class, 'admin']);
 
